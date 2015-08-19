@@ -874,34 +874,7 @@
                     </Messages>
                 </Properties>
             </CampaignElement>
-            <CampaignElement Id="12" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Twitter" Category="Outbound" Name="Twitter" Position="40,150" SharedCheckout="False" RuleGroup="TemplateVariables" Permissions="">
-                <Events />
-                <Properties>
-                    <Messages>
-                        <Message Type="Tweet">
-                            <Credential>&lt;UserCredentials&gt;
-                                &lt;AccessToken&gt;17496414-t0y1xsOKRVXRARN89tHq3dkypi19XxXmMkMuJbDV9&lt;/AccessToken&gt;
-                                &lt;AccessTokenSecret&gt;Rm8ux6XmMUtb6JZTPApa9K0RbmGKG222BBeQDuRRFE&lt;/AccessTokenSecret&gt;
-                                &lt;/UserCredentials&gt;</Credential>
-                            <Tweet>
-                                <Content>Join ##twitter_handler## for a free training #webinar! Register now at: ##microsite_gurl##</Content>
-                                <TwitterAccount>4</TwitterAccount>
-                            </Tweet>
-                        </Message>
-                        <Message Type="DirectMessage">
-                            <Credential>&lt;UserCredentials&gt;
-                                &lt;AccessToken&gt;17496414-t0y1xsOKRVXRARN89tHq3dkypi19XxXmMkMuJbDV9&lt;/AccessToken&gt;
-                                &lt;AccessTokenSecret&gt;Rm8ux6XmMUtb6JZTPApa9K0RbmGKG222BBeQDuRRFE&lt;/AccessTokenSecret&gt;
-                                &lt;/UserCredentials&gt;</Credential>
-                            <DirectMessage DirectMessageAddress="##twitteraccount##" SendToFollowers="False">
-                                <Content>Join ##twitter_handler## for a free training #webinar! Register now at: ##microsite_gurl##</Content>
-                                <TwitterAccount>4</TwitterAccount>
-                            </DirectMessage>
-                        </Message>
-                    </Messages>
-                </Properties>
-            </CampaignElement>
-            <CampaignElement Id="13" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="SMS" Category="Outbound" Name="SMS" Position="340,590" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="TemplateVariables" Permissions="">
+            <CampaignElement Id="12" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="SMS" Category="Outbound" Name="SMS" Position="340,590" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="TemplateVariables" Permissions="">
                 <Events />
                 <Properties>
                     <Messages>
@@ -930,9 +903,7 @@
             <CampaignConnection StartElementId="3" EndElementId="7" />
             <CampaignConnection StartElementId="7" EndElementId="10" />
             <CampaignConnection StartElementId="4" EndElementId="5" />
-            <CampaignConnection StartElementId="1" EndElementId="12" />
-            <CampaignConnection StartElementId="12" EndElementId="3" />
-            <CampaignConnection StartElementId="6" EndElementId="13" />
+            <CampaignConnection StartElementId="6" EndElementId="12" />
         </CampaignConnections>
     </Campaign>
     <RuleGroupSet>
