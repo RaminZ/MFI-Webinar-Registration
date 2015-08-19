@@ -1,0 +1,1018 @@
+<Program Name="Webinar Registration Template" Version="1.0" DbId="0" CheckOutId="0" State="Start" Permissions="">
+    <Campaign Name="Webinar Registration Campaign" Version="1.0" Id="1" DbId="0" CheckOutId="0" State="Start" Permissions="">
+        <CampaignElements>
+            <CampaignElement Id="1" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Webinar Invitees" Position="220,20" SharedCheckout="False" Permissions="">
+                <Filter CriteriaJoinOperator="&amp;">
+                    <Criteria Row="1" Field="email" Operator="Equal" Value="rzamani@mindfireinc.com" />
+                </Filter>
+                <HookedEvents TriggerFireContext="Current Visit" />
+            </CampaignElement>
+            <CampaignElement Id="2" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Webinar Invitation - Email #1" Position="220,150" SharedCheckout="False" RuleGroup="TemplateVariables" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <ToAddress>##email##</ToAddress>
+                            <FromName>##email_sales_rep_name##</FromName>
+                            <FromAddress>##email_sales_rep##</FromAddress>
+                            <ReplyTo>##email_sales_rep##</ReplyTo>
+                            <Subject>Join us for an educational webinar: ##webinar_title##</Subject>
+                            <HtmlContent>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF"&gt;&lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"&gt;&lt;tr bgcolor="#333333"&gt;
+                                &lt;td&gt;
+                                &lt;table cellpadding="0"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="2" color="#9c9c9c"&gt;
+                                Does everything look mixed up? &lt;a href="##email_microsite_link##"&gt;&lt;font color="white" size="2"&gt;View the online version.&lt;/font&gt;&lt;/a&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#FF7100" height="5px" style="height:5px;background-color:#FF7100;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table align="left" cellpadding="0" cellspacing="0" width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;br&gt;&lt;img src="##company_logo_link##"&gt;&lt;br&gt;&amp;nbsp;
+                                &lt;/td&gt;
+                                &lt;td align="right" width="210px" style="width:210px;padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;Free Educational Webinar&lt;/font&gt;&lt;br&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;##webinar_date##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#f0f0f0"&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;##webinar_title##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td style="padding:7px 15px;" align="right" valign="middle"&gt;
+                                &lt;a href="##email_microsite_link##"&gt;&lt;img src="http://c238837.r37.cf1.rackcdn.com/register.gif" alt="" border="0"&gt;&lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="height:10px"&gt;&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="padding:15px;font-family:Tahoma;font-size:13px;"&gt;
+                                ##webinar_content##
+                                &lt;p&gt;&lt;strong&gt;##email_sales_rep_name##&lt;/strong&gt;&lt;br&gt;
+                                ##company_name##&lt;/p&gt;
+                                &lt;br&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" bgcolor="#f0f0f0" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2"&gt;
+                                &lt;a href="##email_microsite_link##"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;##webinar_title##&lt;/font&gt;&lt;/a&gt;&lt;br&gt;
+                                ##webinar_date##&lt;br&gt;
+                                ##webinar_time##&lt;br&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td align="right"&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="3" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;
+                                ##company_copyright##&lt;br&gt;
+                                &lt;font color="#999999"&gt;##company_address##&lt;/font&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td colspan="2" align="right" valign="top" width="110px"&gt;
+                                &lt;font face="Tahoma" size="2" color="#ff6600"&gt;
+                                ( &lt;a href="##Unsubscribe RedirectURL="" ##"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;Unsubscribe&lt;/font&gt;&lt;/a&gt; )
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;</HtmlContent>
+                            <TextContent />
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="3" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Microsite" Category="Inbound" Name="Webinar Registration Microsite" Position="330,300" SharedCheckout="False" Permissions="">
+                <Schedules>
+                    <Schedule DbId="0" Id="1" Status="Scheduled" Type="Fixed" TimeZone="Pacific Standard Time" EmailNotification="rzamani@mindfireinc.com">
+                        <Subject>Microsite (Right Now)</Subject>
+                        <Body />
+                        <Start DateTime="11/30/12 9:18 AM" />
+                        <End DateTime="5/30/23 9:18 AM" />
+                    </Schedule>
+                </Schedules>
+                <Events />
+                <CallbackTouchPoints>
+                    <CallbackTouchPoint Id="1" DbId="0" Callback="http://demo.m.mdl.io/webinars" />
+                </CallbackTouchPoints>
+                <Properties>
+                    <BaseUrlCollection>
+                        <BaseUrl Id="1" DbId="0" URL="demo.m.mdl.io/webinars" Extension="webinars" Outbound_Id="0" Outbound_DbId="0" Parent_Id="0" PurlPosition="Prefix" Domain="demo.m.mdl.io" SSL="False" SearchEngineAllowed="False" />
+                    </BaseUrlCollection>
+                </Properties>
+                <ChildElements>
+                    <ChildElement Id="1" DbId="0" Type="Page" IsVersion="False" Name="redirect.html" Position="300,50">
+                        <Properties PageType="Page" IsHomePage="True" SkipPage="True" IsLoginRequired="False">
+                            <HtmlContent />
+                        </Properties>
+                        <Flow DefaultNextChildName="g.html" DefaultNextChildId="3">
+                            <FlowNextElement Id="2" Name="p.html">
+                                <Filter CriteriaJoinOperator="&amp;">
+                                    <Criteria Row="1" Field="purl" Operator="NotEqual" Value="" />
+                                </Filter>
+                            </FlowNextElement>
+                            <FlowNextElement Id="3" Name="g.html">
+                                <Filter CriteriaJoinOperator="&amp;" />
+                            </FlowNextElement>
+                        </Flow>
+                        <Events />
+                    </ChildElement>
+                    <ChildElement Id="2" RuleGroup="TemplateVariables" DbId="0" Type="Page" IsVersion="False" Name="p.html" Position="200,200">
+                        <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+                            <HtmlContent>&lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;head&gt;
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                &lt;title&gt;Join free webinar: ##webinar_title##&lt;/title&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap.min.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/mycss-webinars.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="css/mycss.css" rel="stylesheet" type="text/css"&gt;
+
+                                &lt;!--[if IE]&gt;
+                                &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                                &lt;![endif]--&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                &lt;div class="container-fluid"&gt;
+                                &lt;div class="page-header"&gt;
+                                &lt;img class="" src="##company_logo_link##"&gt;
+                                &lt;h5 class="pull-right"&gt;Call us: ##company_phone##&lt;/h5&gt;
+
+                                &lt;/div&gt;&lt;!--/page-header--&gt;
+                                &lt;div class="row-fluid"&gt;
+                                &lt;div class="span2" id="sidebar-left"&gt;
+                                &lt;h4&gt;Free Webinar&lt;/h4&gt;
+                                &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; ##webinar_date##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; ##webinar_time## &lt;a href="##local_time_link##"&gt;check local time&lt;/a&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Duration:&lt;/strong&gt; ##webinar_duration##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Speakers:&lt;/strong&gt;
+                                &lt;p&gt;&lt;img src="##speaker_1_img_link##" class="img-polaroid" height="100" width="100"&gt;&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_name##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_title##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_bio##&lt;/p&gt;
+                                &lt;p&gt;&lt;script src="//platform.linkedin.com/in.js" type="text/javascript"&gt;&lt;/script&gt;
+                                &lt;script type="IN/Share"&gt;&lt;/script&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;a href="https://twitter.com/share" class="twitter-share-button" data-via="MindFireInc" data-count="none"&gt;Tweet&lt;/a&gt;
+                                &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;&lt;/p&gt;
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+
+                                &lt;div class="span6" id="main_content"&gt;
+                                &lt;h2&gt;##webinar_title##&lt;/h2&gt;
+                                &lt;div&gt;##webinar_content##&lt;/div&gt;
+
+
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+                                &lt;div class="well span4" id="sidebar-right"&gt;
+                                &lt;form method="post"&gt;
+                                &lt;fieldset&gt;
+                                &lt;!-- &lt;legend&gt;Please fill out the form:&lt;/legend&gt; --&gt;
+
+                                &lt;label&gt;&lt;strong&gt;Email&lt;/strong&gt; * (&lt;a href="##company_privacy_link##"&gt;privacy policy&lt;/a&gt;)&lt;/label&gt;
+                                &lt;input type="text" name="email" tabindex="40" placeholder="email@mycompany.com" value="##email##"&gt;
+                                &lt;label&gt;&lt;strong&gt;Phone&lt;/strong&gt; *&lt;/label&gt;
+                                &lt;input type="text" name="phone" tabindex="50" placeholder="1234567890" value="##phone##"&gt;
+                                &lt;label&gt;&lt;strong&gt;Cell Phone &lt;/strong&gt;&lt;small class="muted"&gt;(Optional: for SMS reminders)&lt;/small&gt;&lt;/label&gt;
+                                &lt;input type="text" name="mobile" tabindex="60" placeholder="1234567890" value="##mobile##"&gt;
+
+                                &lt;button type="submit" class="btn btn-primary btn-large btn-block" tabindex="100"&gt;Register now!&lt;/button&gt;
+                                &lt;/fieldset&gt;
+                                &lt;/form&gt;
+                                &lt;/div&gt;&lt;!--/span3--&gt;
+
+                                &lt;/div&gt;&lt;!--/row--&gt;
+
+                                &lt;footer class="clearfix"&gt;
+                                &lt;hr&gt;
+                                &lt;div class="row"&gt;
+                                &lt;center&gt;&lt;small&gt;##company_copyright## | ##company_phone## | ##company_address##&lt;/small&gt;&lt;/center&gt;
+                                &lt;/div&gt;&lt;!--/row--&gt;
+                                &lt;/footer&gt;
+                                &lt;!--javascript codes--&gt;
+                                &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+                                &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/bootstrap.min.js"&gt;&lt;/script&gt;
+                                &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/myjs-webinars.js" type="text/javascript"&gt;&lt;/script&gt;
+                                &lt;!--/javascript codes--&gt;
+                                &lt;/div&gt;&lt;!--/container--&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+
+                            </HtmlContent>
+                        </Properties>
+                        <Form>
+                            <Input Type="TextBox" Name="email">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="phone">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="mobile">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                        </Form>
+                        <Flow>
+                            <FlowNextElement Id="4" Name="confirmation.html">
+                                <Filter CriteriaJoinOperator="&amp;" />
+                            </FlowNextElement>
+                        </Flow>
+                        <Events />
+                    </ChildElement>
+                    <ChildElement Id="3" RuleGroup="TemplateVariables" DbId="0" Type="Page" IsVersion="False" Name="g.html" Position="390,200">
+                        <Properties PageType="AddContact" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+                            <HtmlContent>&lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &lt;head&gt;
+                                &lt;meta charset="UTF-8"&gt;
+                                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                                &lt;title&gt;Join free webinar: ##webinar_title##&lt;/title&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap.min.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/mycss-webinars.css" rel="stylesheet" type="text/css"&gt;
+                                &lt;link href="css/mycss.css" rel="stylesheet" type="text/css"&gt;
+
+                                &lt;!--[if IE]&gt;
+                                &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                                &lt;![endif]--&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                &lt;div class="container-fluid"&gt;
+                                &lt;div class="page-header"&gt;
+                                &lt;img class="" src="##company_logo_link##"&gt;
+                                &lt;h5 class="pull-right"&gt;Call us: ##company_phone##&lt;/h5&gt;
+
+                                &lt;/div&gt;&lt;!--/page-header--&gt;
+                                &lt;div class="row-fluid"&gt;
+                                &lt;div class="span2" id="sidebar-left"&gt;
+                                &lt;h4&gt;Free Webinar&lt;/h4&gt;
+                                &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; ##webinar_date##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; ##webinar_time## &lt;a href="##local_time_link##"&gt;check local time&lt;/a&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Duration:&lt;/strong&gt; ##webinar_duration##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Speakers:&lt;/strong&gt;
+                                &lt;p&gt;&lt;img src="##speaker_1_img_link##" class="img-polaroid" height="100" width="100"&gt;&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_name##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_title##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_bio##&lt;/p&gt;
+                                &lt;p&gt;&lt;script src="//platform.linkedin.com/in.js" type="text/javascript"&gt;&lt;/script&gt;
+                                &lt;script type="IN/Share"&gt;&lt;/script&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;a href="https://twitter.com/share" class="twitter-share-button" data-via="MindFireInc" data-count="none"&gt;Tweet&lt;/a&gt;
+                                &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;&lt;/p&gt;
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+
+                                &lt;div class="span6" id="main_content"&gt;
+                                &lt;h2&gt;##webinar_title##&lt;/h2&gt;
+                                &lt;div&gt;##webinar_content##&lt;/div&gt;
+
+
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+                                &lt;div class="well span4" id="sidebar-right"&gt;
+                                &lt;form method="post"&gt;
+                                &lt;fieldset&gt;
+                                &lt;!-- &lt;legend&gt;Please fill out the form:&lt;/legend&gt; --&gt;
+                                &lt;label&gt;&lt;strong&gt;First Name&lt;/strong&gt; *&lt;/label&gt;
+                                &lt;input type="text" name="firstname" tabindex="10" placeholder="John"&gt;
+                                &lt;label&gt;&lt;strong&gt;Last Name&lt;/strong&gt; *&lt;/label&gt;
+                                &lt;input type="text" name="lastname" tabindex="20" placeholder="Sample"&gt;
+                                &lt;label&gt;&lt;strong&gt;Company&lt;/strong&gt; *&lt;/label&gt;
+                                &lt;input type="text" name="company" tabindex="30" placeholder="My Company"&gt;
+                                &lt;label&gt;&lt;strong&gt;Email&lt;/strong&gt; * (&lt;a href="##company_privacy_link##"&gt;privacy policy&lt;/a&gt;)&lt;/label&gt;
+                                &lt;input type="text" name="email" tabindex="40" placeholder="email@mycompany.com"&gt;
+                                &lt;label&gt;&lt;strong&gt;Phone&lt;/strong&gt; *&lt;/label&gt;
+                                &lt;input type="text" name="phone" tabindex="50" placeholder="1234567890"&gt;
+                                &lt;label&gt;&lt;strong&gt;Cell Phone &lt;/strong&gt;&lt;small class="muted"&gt;(Optional: for SMS reminders)&lt;/small&gt;&lt;/label&gt;
+                                &lt;input type="text" name="mobile" tabindex="60" placeholder="1234567890"&gt;
+
+                                &lt;button type="submit" class="btn btn-primary btn-large btn-block" tabindex="100"&gt;Register now!&lt;/button&gt;
+                                &lt;/fieldset&gt;
+                                &lt;/form&gt;
+                                &lt;/div&gt;&lt;!--/span3--&gt;
+
+                                &lt;/div&gt;&lt;!--/row--&gt;
+
+                                &lt;footer class="clearfix"&gt;
+                                &lt;hr&gt;
+                                &lt;div class="row"&gt;
+                                &lt;center&gt;&lt;small&gt;##company_copyright## | ##company_phone## | ##company_address##&lt;/small&gt;&lt;/center&gt;
+                                &lt;/div&gt;&lt;!--/row--&gt;
+                                &lt;/footer&gt;
+                                &lt;!--javascript codes--&gt;
+                                &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+                                &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/bootstrap.min.js"&gt;&lt;/script&gt;
+                                &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/myjs-webinars.js" type="text/javascript"&gt;&lt;/script&gt;
+                                &lt;!--/javascript codes--&gt;
+                                &lt;/div&gt;&lt;!--/container--&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+
+                            </HtmlContent>
+                        </Properties>
+                        <Form>
+                            <Input Type="TextBox" Name="firstname">
+                                <IsRequired>True</IsRequired>
+                                <IsRequiredMessage />
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="lastname">
+                                <IsRequired>True</IsRequired>
+                                <IsRequiredMessage />
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="company">
+                                <IsRequired>True</IsRequired>
+                                <IsRequiredMessage />
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="email">
+                                <IsRequired>True</IsRequired>
+                                <IsRequiredMessage />
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="phone">
+                                <IsRequired>True</IsRequired>
+                                <IsRequiredMessage />
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="mobile">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                        </Form>
+                        <Flow>
+                            <FlowNextElement Id="4" Name="confirmation.html">
+                                <Filter CriteriaJoinOperator="&amp;" />
+                            </FlowNextElement>
+                        </Flow>
+                        <Events />
+                    </ChildElement>
+                    <ChildElement Id="4" RuleGroup="TemplateVariables" DbId="0" Type="Page" IsVersion="False" Name="confirmation.html" Position="310,360">
+                        <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+                            <HtmlContent>&lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                ##page_head##
+                                &lt;body&gt;
+                                &lt;div class="container-fluid"&gt;
+                                &lt;div class="page-header"&gt;
+                                &lt;img class="" src="##company_logo_link##"&gt;
+                                &lt;h5 class="pull-right"&gt;Call us: ##company_phone##&lt;/h5&gt;
+
+                                &lt;/div&gt;&lt;!--/page-header--&gt;
+                                &lt;div class="row-fluid"&gt;
+                                &lt;div class="span2" id="sidebar-left"&gt;
+                                &lt;h4&gt;Free Webinar&lt;/h4&gt;
+                                &lt;p&gt;&lt;strong&gt;Date:&lt;/strong&gt; ##webinar_date##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Time:&lt;/strong&gt; ##webinar_time## &lt;a href="##local_time_link##"&gt;check local time&lt;/a&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Duration:&lt;/strong&gt; ##webinar_duration##&lt;/p&gt;
+                                &lt;p&gt;&lt;strong&gt;Speakers:&lt;/strong&gt;
+                                &lt;p&gt;&lt;img src="##speaker_1_img_link##" class="img-polaroid" height="100" width="100"&gt;&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_name##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_title##&lt;/p&gt;
+                                &lt;p&gt;##speaker_1_bio##&lt;/p&gt;
+
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+
+                                &lt;div class="span6" id="main_content"&gt;
+                                &lt;h2&gt;##webinar_title##&lt;/h2&gt;
+                                &lt;div&gt;
+                                &lt;h4&gt;Thank you ##firstname##!&lt;/h4&gt;
+                                &lt;p&gt;You are now registered to our webinar. You'll receive a confirmation email shortly that includes your login credentials.&lt;/p&gt;
+                                &lt;p&gt;We look forward to seeing you in the webinar!&lt;/p&gt;
+                                &lt;p&gt;Don't forget to share this webinar with your friends:&lt;/p&gt;
+
+                                &lt;div&gt;
+                                &lt;p&gt;&lt;script src="//platform.linkedin.com/in.js" type="text/javascript"&gt;&lt;/script&gt;
+                                &lt;script type="IN/Share"&gt;&lt;/script&gt;&lt;/p&gt;
+                                &lt;p&gt;&lt;a href="https://twitter.com/share" class="twitter-share-button" data-url="##twitter_share_link##" data-via="MindFireInc" data-count="none" data-hashtags="webinar"&gt;Tweet&lt;/a&gt;
+                                &lt;script&gt;!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");&lt;/script&gt;&lt;/p&gt;
+                                &lt;/div&gt;
+                                &lt;/div&gt;
+
+
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+                                &lt;div class="well span4" id="sidebar-right"&gt;
+                                &lt;p class="lead"&gt;##webinar_post_registration_offer##&lt;/p&gt;
+                                &lt;a href="##post_registration_offer_link##" class="btn btn-large btn-primary"&gt;Check it out now!&lt;/a&gt;
+                                &lt;/div&gt;&lt;!--/span3--&gt;
+
+                                &lt;/div&gt;&lt;!--/row--&gt;
+                                &lt;iframe src="GotoWebinar.html" width="10" height="10" style="display:none;"&gt;&lt;/iframe&gt;
+                                ##page_footer##
+                                &lt;/div&gt;&lt;!--/container--&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+
+                            </HtmlContent>
+                        </Properties>
+                        <Flow />
+                        <Events />
+                    </ChildElement>
+                    <ChildElement Id="5" RuleGroup="TemplateVariables" DbId="0" Type="Page" IsVersion="False" Name="remove.html" Position="750,200">
+                        <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+                            <HtmlContent>&lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                ##page_head##
+                                &lt;body&gt;
+                                &lt;div class="container-fluid"&gt;
+                                &lt;div class="page-header"&gt;
+                                &lt;img class="" src="##company_logo_link##"&gt;
+                                &lt;h5 class="pull-right"&gt;Call us: ##company_phone##&lt;/h5&gt;
+
+                                &lt;/div&gt;&lt;!--/page-header--&gt;
+                                &lt;div class="row-fluid"&gt;
+
+
+                                &lt;div class="span8" id="main_content"&gt;
+
+                                &lt;div&gt;
+                                &lt;h3&gt;Unsubscription confirmed!&lt;/h3&gt;
+                                &lt;p&gt;##firstname##, you are now removed from our email list and will no longer receive emails from ##company_name##.&lt;/p&gt;
+
+                                &lt;/div&gt;
+
+
+                                &lt;/div&gt;&lt;!--/span9--&gt;
+                                &lt;div class="well span4" id="sidebar-right"&gt;
+                                &lt;p&gt;If you have any comments or concerns feel free to contact us anytime.&lt;/p&gt;
+                                &lt;a href="##company_contact_link##" class="btn btn-primary"&gt;Contact Us&lt;/a&gt;
+                                &lt;/div&gt;&lt;!--/span3--&gt;
+
+                                &lt;/div&gt;&lt;!--/row--&gt;
+
+                                ##page_footer##
+                                &lt;/div&gt;&lt;!--/container--&gt;
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+
+                            </HtmlContent>
+                        </Properties>
+                        <Flow />
+                        <Events />
+                    </ChildElement>
+                    <ChildElement Id="6" RuleGroup="WebinarRule" DbId="0" Type="Page" IsVersion="False" Name="gotowebinar.html" Position="600,200">
+                        <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+                            <HtmlContent>&lt;html&gt;
+                                &lt;head&gt;
+                                &lt;title&gt;##company_name## - Registering to Webinar...&lt;/title&gt;
+                                &lt;/head&gt;
+                                &lt;body&gt;
+                                &lt;form method="post" name="webinarRegistrationForm" action="https://www1.gotomeeting.com/en_US/island/webinar/registration.flow"&gt;
+                                &lt;input name="Template" value="island/webinar/registration.tmpl" type="hidden"&gt;
+                                &lt;input name="Form" value="webinarRegistrationForm" type="hidden"&gt;
+                                &lt;input id="webinarKey" name="WebinarKey" value="##webinar_key##" type="hidden"&gt;
+                                &lt;input name="Name_First" value="##firstname##" type="hidden"&gt;
+                                &lt;input name="Name_Last" value="##lastname##" type="hidden"&gt;
+                                &lt;input name="Email" value="##email##" type="hidden"&gt;
+                                &lt;input name="Address_Street" value="##address1##" type="hidden"&gt;
+                                &lt;input name="Address_City" value="##city##" type="hidden"&gt;
+                                &lt;input name="Address_State" value="##state##" type="hidden"&gt;
+                                &lt;input name="Address_Zip" value="##zip##" type="hidden"&gt;
+                                &lt;input name="Address_Country" value="##country##" type="hidden"&gt;
+                                &lt;input name="PhoneNumber" value="##phone##" type="hidden"&gt;
+                                &lt;input name="Organization" value="##company##" type="hidden"&gt;
+                                &lt;input name="JobTitle" value="##title##" type="hidden"&gt;
+                                &lt;/form&gt;
+                                ##SubmitForm##
+                                &lt;/body&gt;
+                                &lt;/html&gt;
+                            </HtmlContent>
+                        </Properties>
+                        <Form>
+                            <Input Type="TextBox" Name="Template">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Form">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="WebinarKey">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Name_First">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Name_Last">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Email">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Address_Street">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Address_City">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Address_State">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Address_Zip">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Address_Country">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="PhoneNumber">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="Organization">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                            <Input Type="TextBox" Name="JobTitle">
+                                <IsRequired>False</IsRequired>
+                                <ValidationRegex />
+                                <ValidationRegexMessage />
+                            </Input>
+                        </Form>
+                        <Flow />
+                        <Events />
+                    </ChildElement>
+                </ChildElements>
+                <ChildConnections>
+                    <ChildConnection StartElementId="1" EndElementId="3" />
+                    <ChildConnection StartElementId="1" EndElementId="2" />
+                    <ChildConnection StartElementId="2" EndElementId="4" />
+                    <ChildConnection StartElementId="3" EndElementId="4" />
+                </ChildConnections>
+            </CampaignElement>
+            <CampaignElement Id="4" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Not registered" Position="480,20" SharedCheckout="False" Permissions="">
+                <Filter CriteriaJoinOperator="&amp;">
+                    <Criteria Row="1" Field="email" Operator="Equal" Value="rzamani@mindfireinc.com" />
+                    <AdvancedFilter CriteriaJoinOperator="&amp;">
+                        <AdvancedCriteria Criteria="Performed an Event" CriteriaId="2" From="11/30/12" To="11/30/22" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-3" InboundDetailId="-2" CriteriaOption="30502" Operator="Equal" Value="0" />
+                        <AdvancedCriteria Criteria="Performed an Event" CriteriaId="2" From="11/30/12" To="11/30/22" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-3" InboundDetailId="-3" CriteriaOption="30502" Operator="Equal" Value="0" />
+                    </AdvancedFilter>
+                </Filter>
+                <HookedEvents TriggerFireContext="Current Visit" />
+            </CampaignElement>
+            <CampaignElement Id="6" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Registrants" Position="180,450" SharedCheckout="False" Permissions="">
+                <Filter CriteriaJoinOperator="&amp;" />
+                <HookedEvents TriggerFireContext="Current Child Visit">
+                    <Event EventId="30502" ElementId="3" ChildElementId="2" />
+                    <Event EventId="30502" ElementId="3" ChildElementId="3" />
+                </HookedEvents>
+            </CampaignElement>
+            <CampaignElement Id="7" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Unsubscribers" Position="500,450" SharedCheckout="False" Permissions="">
+                <Filter CriteriaJoinOperator="&amp;">
+                    <AdvancedFilter CriteriaJoinOperator="|">
+                        <AdvancedCriteria Criteria="Performed an Event" CriteriaId="2" From="11/30/12" To="11/30/22" ProgramId="-1" CampaignId="-1" OutboundId="-2" CriteriaOption="20104" Operator="GreaterThan" Value="0" />
+                        <AdvancedCriteria Criteria="Performed an Event" CriteriaId="2" From="11/30/12" To="11/30/22" ProgramId="-1" CampaignId="-1" OutboundId="-5" CriteriaOption="20104" Operator="GreaterThan" Value="0" />
+                    </AdvancedFilter>
+                </Filter>
+                <HookedEvents TriggerFireContext="Current Child Visit">
+                    <Event EventId="30500" ElementId="3" />
+                </HookedEvents>
+            </CampaignElement>
+            <CampaignElement Id="5" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Webinar Reminder - Email #2" Position="480,150" SharedCheckout="False" RuleGroup="TemplateVariables" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <ToAddress>##email##</ToAddress>
+                            <FromName>##email_sales_rep_name##</FromName>
+                            <FromAddress>##email_sales_rep##</FromAddress>
+                            <ReplyTo>##email_sales_rep##</ReplyTo>
+                            <Subject>Reminder: Don't forget to register now for a webinar: ##webinar_title##</Subject>
+                            <HtmlContent>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF"&gt;&lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"&gt;&lt;tr bgcolor="#333333"&gt;
+                                &lt;td&gt;
+                                &lt;table cellpadding="0"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="2" color="#9c9c9c"&gt;
+                                Does everything look mixed up? &lt;a href="##email_microsite_link##"&gt;&lt;font color="white" size="2"&gt;View the online version.&lt;/font&gt;&lt;/a&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#FF7100" height="5px" style="height:5px;background-color:#FF7100;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table align="left" cellpadding="0" cellspacing="0" width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;br&gt;&lt;img src="##company_logo_link##"&gt;&lt;br&gt;&amp;nbsp;
+                                &lt;/td&gt;
+                                &lt;td align="right" width="210px" style="width:210px;padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;Free Educational Webinar&lt;/font&gt;&lt;br&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;##webinar_date##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#f0f0f0"&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;##webinar_title##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td style="padding:7px 15px;" align="right" valign="middle"&gt;
+                                &lt;a href="##email_microsite_link##"&gt;&lt;img src="http://c238837.r37.cf1.rackcdn.com/register.gif" alt="" border="0"&gt;&lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="height:10px"&gt;&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="padding:15px;font-family:Tahoma;font-size:13px;"&gt;
+                                ##webinar_content##
+
+                                &lt;p&gt;&lt;strong&gt;##email_sales_rep_name##&lt;/strong&gt;&lt;br&gt;
+                                ##company_name##&lt;/p&gt;
+                                &lt;br&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" bgcolor="#f0f0f0" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2"&gt;
+                                &lt;a href="##email_microsite_link##"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;##webinar_title##&lt;/font&gt;&lt;/a&gt;&lt;br&gt;
+                                ##webinar_date##&lt;br&gt;
+                                ##webinar_time##&lt;br&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td align="right"&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="3" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;
+                                ##company_copyright##&lt;br&gt;
+                                &lt;font color="#999999"&gt;##company_address##&lt;/font&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td colspan="2" align="right" valign="top" width="110px"&gt;
+                                &lt;font face="Tahoma" size="2" color="#ff6600"&gt;
+                                ( &lt;a href="##Unsubscribe RedirectURL="" ##"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;Unsubscribe&lt;/font&gt;&lt;/a&gt; )
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;</HtmlContent>
+                            <TextContent />
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="8" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Confirmation Email" Position="20,590" SharedCheckout="False" IsTrackingRequired="False" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <ToAddress>##email##</ToAddress>
+                            <FromName>##email_sales_rep_name##</FromName>
+                            <FromAddress>##email_sales_rep##</FromAddress>
+                            <ReplyTo>##email_sales_rep##</ReplyTo>
+                            <Subject>Thank you for registring for webinar: ##webinar_title##</Subject>
+                            <HtmlContent>&lt;table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF"&gt;&lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table width="600" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"&gt;&lt;tr bgcolor="#333333"&gt;
+                                &lt;td&gt;
+                                &lt;table cellpadding="0"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="2" color="#9c9c9c"&gt;
+                                Does everything look mixed up? &lt;a href="##purl##.##email_microsite_link##"&gt;&lt;font color="white" size="2"&gt;View the online version.&lt;/font&gt;&lt;/a&gt;.
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#FF7100" height="5px" style="height:5px;background-color:#FF7100;"&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;table align="left" cellpadding="0" cellspacing="0" width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;br&gt;&lt;img src="##company_logo_link##"&gt;&lt;br&gt;&amp;nbsp;
+                                &lt;/td&gt;
+                                &lt;td align="right" width="210px" style="width:210px;padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;Free Educational Webinar&lt;/font&gt;&lt;br&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;##webinar_date##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr bgcolor="#f0f0f0"&gt;
+                                &lt;td style="padding:15px;"&gt;
+                                &lt;font face="Tahoma" size="3"&gt;##webinar_title##&lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td style="padding:7px 15px;" align="right" valign="middle"&gt;
+                                &lt;a href="##purl##.##email_microsite_link##"&gt;&lt;img src="http://c238837.r37.cf1.rackcdn.com/register.gif" alt="" border="0"&gt;&lt;/a&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="height:10px"&gt;&lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" style="padding:15px;font-family:Tahoma;font-size:13px;"&gt;
+                                &lt;p&gt;Thank you ##firstname## for registering for our webinar. You should have received an email with your login credentials and instructions on how to attend the webinar. If you haven't received it, or if you have any questions, feel free to contact me any time. I am happy to help and answer any questions you may have about the webinar or ##company_name## products and services.&lt;/p&gt;
+                                &lt;p&gt;Looking forward to seeing you at the webinar!&lt;/p&gt;
+                                &lt;p&gt;##email_sales_rep_name##&lt;/p&gt;
+                                &lt;p&gt;Email: ##email_sales_rep##&lt;/p&gt;
+
+                                &lt;br&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="2" bgcolor="#f0f0f0" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2"&gt;
+                                &lt;a href="##microsite##/##purl##/Register.html"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;##webinar_title##&lt;/font&gt;&lt;/a&gt;&lt;br&gt;
+                                ##webinar_date##&lt;br&gt;
+                                ##webinar_time##&lt;br&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td align="right"&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;tr&gt;
+                                &lt;td colspan="3" style="padding:15px;"&gt;
+                                &lt;table width="100%"&gt;
+                                &lt;tr&gt;
+                                &lt;td&gt;
+                                &lt;font face="Tahoma" size="2" color="#666666"&gt;
+                                ##company_copyright##&lt;br&gt;
+                                &lt;font color="#999999"&gt;##company_address##&lt;/font&gt;
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;td colspan="2" align="right" valign="top" width="110px"&gt;
+                                &lt;font face="Tahoma" size="2" color="#ff6600"&gt;
+                                ( &lt;a href="##Unsubscribe RedirectURL="" ##"&gt;&lt;font face="Tahoma" size="2" color="#277AB9"&gt;Unsubscribe&lt;/font&gt;&lt;/a&gt; )
+                                &lt;/font&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;
+                                &lt;/td&gt;
+                                &lt;/tr&gt;
+                                &lt;/table&gt;</HtmlContent>
+                            <TextContent />
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="9" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Lead Alert Email" Position="180,590" SharedCheckout="False" IsTrackingRequired="False" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <ToAddress>##email_sales_rep##</ToAddress>
+                            <FromName>Webinar Campaign Registration</FromName>
+                            <FromAddress>##email_sales_rep##</FromAddress>
+                            <ReplyTo>##email_sales_rep##</ReplyTo>
+                            <Subject>##firstname## ##lastname## of ##company## registered for the webinar: ##webinar_title##</Subject>
+                            <HtmlContent>##ContactHistory ProgramId="19"  InboundIds="17" EventIds="30502" Month="1" D="0" H="0" M="0" IncludeProfile="True" IncludeActivities="True" ShowCriteria="True"##</HtmlContent>
+                            <TextContent />
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="10" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Remove from CRM" Position="500,590" SharedCheckout="False" IsTrackingRequired="False" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <ToAddress>##email_sales_rep##</ToAddress>
+                            <FromName>Webinar Campaign Unsubscribe</FromName>
+                            <FromAddress>##email_sales_rep##</FromAddress>
+                            <ReplyTo>##email_sales_rep##</ReplyTo>
+                            <Subject>##firstname## ##lastname## of ##company## unsubscribed at webinar: ##webinar_title##</Subject>
+                            <HtmlContent>Remove the following contact from CRM system:&lt;br&gt;&lt;hr&gt;##ContactHistory ProgramId="19" OutboundIds="56,53,52"  EventIds="20104" Month="1" D="0" H="0" M="0" IncludeProfile="True" IncludeActivities="True" ShowCriteria="True"##
+                            </HtmlContent>
+                            <TextContent />
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="12" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Twitter" Category="Outbound" Name="Twitter" Position="40,150" SharedCheckout="False" RuleGroup="TemplateVariables" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Type="Tweet">
+                            <Credential>&lt;UserCredentials&gt;
+                                &lt;AccessToken&gt;17496414-t0y1xsOKRVXRARN89tHq3dkypi19XxXmMkMuJbDV9&lt;/AccessToken&gt;
+                                &lt;AccessTokenSecret&gt;Rm8ux6XmMUtb6JZTPApa9K0RbmGKG222BBeQDuRRFE&lt;/AccessTokenSecret&gt;
+                                &lt;/UserCredentials&gt;</Credential>
+                            <Tweet>
+                                <Content>Join ##twitter_handler## for a free training #webinar! Register now at: ##microsite_gurl##</Content>
+                                <TwitterAccount>4</TwitterAccount>
+                            </Tweet>
+                        </Message>
+                        <Message Type="DirectMessage">
+                            <Credential>&lt;UserCredentials&gt;
+                                &lt;AccessToken&gt;17496414-t0y1xsOKRVXRARN89tHq3dkypi19XxXmMkMuJbDV9&lt;/AccessToken&gt;
+                                &lt;AccessTokenSecret&gt;Rm8ux6XmMUtb6JZTPApa9K0RbmGKG222BBeQDuRRFE&lt;/AccessTokenSecret&gt;
+                                &lt;/UserCredentials&gt;</Credential>
+                            <DirectMessage DirectMessageAddress="##twitteraccount##" SendToFollowers="False">
+                                <Content>Join ##twitter_handler## for a free training #webinar! Register now at: ##microsite_gurl##</Content>
+                                <TwitterAccount>4</TwitterAccount>
+                            </DirectMessage>
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+            <CampaignElement Id="13" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="SMS" Category="Outbound" Name="SMS" Position="340,590" SharedCheckout="False" IsTrackingRequired="False" RuleGroup="TemplateVariables" Permissions="">
+                <Events />
+                <Properties>
+                    <Messages>
+                        <Message Id="1">
+                            <FromAccountCredential>&lt;UserCredentials&gt;
+                                &lt;ShortCode&gt;&lt;/ShortCode&gt;
+                                &lt;LongCode&gt;&lt;/LongCode&gt;
+                                &lt;NickName&gt;FOXT&lt;/NickName&gt;
+                                &lt;/UserCredentials&gt;</FromAccountCredential>
+                            <To>##mobile##</To>
+                            <Content>Hi ##firstname##, this is a friendly reminder that your webinar is starting at ##webinar_time## on ##webinar_date##. See you soon!
+                            </Content>
+                            <SmsAccount>3</SmsAccount>
+                        </Message>
+                    </Messages>
+                </Properties>
+            </CampaignElement>
+        </CampaignElements>
+        <CampaignConnections>
+            <CampaignConnection StartElementId="1" EndElementId="2" />
+            <CampaignConnection StartElementId="2" EndElementId="3" />
+            <CampaignConnection StartElementId="5" EndElementId="3" />
+            <CampaignConnection StartElementId="3" EndElementId="6" />
+            <CampaignConnection StartElementId="6" EndElementId="8" />
+            <CampaignConnection StartElementId="6" EndElementId="9" />
+            <CampaignConnection StartElementId="3" EndElementId="7" />
+            <CampaignConnection StartElementId="7" EndElementId="10" />
+            <CampaignConnection StartElementId="4" EndElementId="5" />
+            <CampaignConnection StartElementId="1" EndElementId="12" />
+            <CampaignConnection StartElementId="12" EndElementId="3" />
+            <CampaignConnection StartElementId="6" EndElementId="13" />
+        </CampaignConnections>
+    </Campaign>
+    <RuleGroupSet>
+        <RuleGroup Name="WebinarRule" Description="Submits the form to GTW">
+            <ContentVariables>
+                <ContentVariable Name="SubmitForm">&lt;!-- Form Submitted. --&gt;</ContentVariable>
+            </ContentVariables>
+            <Rule Name="RuleSubmit" Description="">
+                <Filter CriteriaJoinOperator="&amp;">
+                    <AdvancedFilter CriteriaJoinOperator="&amp;">
+                        <AdvancedCriteria Criteria="Performed an Event" CriteriaId="2" From="11/30/10" To="11/30/22" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-3" InboundDetailId="-6" CriteriaOption="30501" Operator="Equal" Value="0" />
+                    </AdvancedFilter>
+                </Filter>
+                <ContentVariables>
+                    <ContentVariable Name="SubmitForm">&lt;img style="WIDTH: 1px;HEIGHT:1px;" onload="javascript:document.forms[0].submit();" src="http://dl.dropbox.com/u/2126295/MindFireInc_Logo.png" alt=""&gt; </ContentVariable>
+                </ContentVariables>
+            </Rule>
+        </RuleGroup>
+        <RuleGroup Name="TemplateVariables" Description="">
+            <ContentVariables>
+                <ContentVariable Name="company_address">company_address: 123 Anytown, Sample City, CA 90210</ContentVariable>
+                <ContentVariable Name="company_copyright">company_copyright: &amp;copy; 2012 ##company_name##</ContentVariable>
+                <ContentVariable Name="company_logo_link">http://dl.dropbox.com/u/2126295/Assets/shim_logo300x75px.gif</ContentVariable>
+                <ContentVariable Name="company_name">company_name: Sample Company</ContentVariable>
+                <ContentVariable Name="company_phone">company_phone: 555-555-5555</ContentVariable>
+                <ContentVariable Name="email_microsite_link">{{##InboundTouchPoint Callback="1:3:1" PURL="True" CallbackName="email_microsite_link" PurlPosition="Prefix" ##}}</ContentVariable>
+                <ContentVariable Name="email_sales_rep">john@sample.com</ContentVariable>
+                <ContentVariable Name="email_sales_rep_name">John Sample</ContentVariable>
+                <ContentVariable Name="local_time_link">Visti: http://www.timeanddate.com/worldclock/fixedform.html to set your date and time, then grab the URL and paste it here.</ContentVariable>
+                <ContentVariable Name="page_footer">	&lt;footer class="clearfix"&gt;
+                    &lt;hr&gt;
+                    &lt;div class="row"&gt;
+                    &lt;center&gt;&lt;small&gt;##company_copyright## | ##company_phone## | ##company_address##&lt;/small&gt;&lt;/center&gt;
+                    &lt;/div&gt;&lt;!--/row--&gt;
+                    &lt;/footer&gt;
+                    &lt;!--javascript codes--&gt;
+                    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+                    &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/bootstrap.min.js"&gt;&lt;/script&gt;
+                    &lt;script src="http://dl.dropbox.com/u/2126295/boot/js/myjs-webinars.js" type="text/javascript"&gt;&lt;/script&gt;
+                    &lt;!--/javascript codes--&gt;
+                    &lt;/div&gt;&lt;!--/container--&gt;</ContentVariable>
+                <ContentVariable Name="page_head">&lt;head&gt;
+                    &lt;meta charset="UTF-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                    &lt;title&gt;Unsubscription Confirmation&lt;/title&gt;
+                    &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap.min.css" rel="stylesheet" type="text/css"&gt;
+                    &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"&gt;
+                    &lt;link href="http://dl.dropbox.com/u/2126295/boot/css/mycss-webinars.css" rel="stylesheet" type="text/css"&gt;
+                    &lt;link href="css/mycss.css" rel="stylesheet" type="text/css"&gt;
+
+                    &lt;!--[if IE]&gt;
+                    &lt;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&gt;&lt;/script&gt;
+                    &lt;![endif]--&gt;
+                    &lt;/head&gt;</ContentVariable>
+                <ContentVariable Name="post_registration_offer_link">http://mindfirestudio.com/free-signup</ContentVariable>
+                <ContentVariable Name="post_registration_offer">Take a free test drive of our new marketing automation software: &lt;strong&gt;MindFire Studio&lt;/strong&gt;</ContentVariable>
+                <ContentVariable Name="company_privacy_link">http://#</ContentVariable>
+                <ContentVariable Name="speaker_1_bio">speaker_1_bio: a brief biography of the speaker. No more than 50 words.</ContentVariable>
+                <ContentVariable Name="speaker_1_img_link">http://dl.dropbox.com/u/2126295/Demo/avatar_Mary_Jones.jpeg</ContentVariable>
+                <ContentVariable Name="speaker_1_name">Speaker_1_name: Mary Smith</ContentVariable>
+                <ContentVariable Name="speaker_1_title">speaker_1_title: VP of Marketing</ContentVariable>
+                <ContentVariable Name="twitter_share_link">##microsite_gurl##</ContentVariable>
+                <ContentVariable Name="webinar_title">webinar_title: How to Win Friends and Influence People </ContentVariable>
+                <ContentVariable Name="webinar_content">webinar_content: &lt;p&gt;first paragraph goes here...&lt;/p&gt;
+                    &lt;ul&gt;
+                    &lt;li&gt;bullet point one&lt;/li&gt;
+                    &lt;li&gt;bullet point two&lt;/li&gt;
+                    &lt;li&gt;bullet point three&lt;/li&gt;
+                    &lt;/ul&gt;
+                    &lt;p&gt;second paragraph goes here...&lt;/p&gt;
+
+                </ContentVariable>
+                <ContentVariable Name="webinar_date">webinar_date: December 12, 2012</ContentVariable>
+                <ContentVariable Name="webinar_time">webinar_time: 11:00 am PST | 2:00 PM EST</ContentVariable>
+                <ContentVariable Name="webinar_duration">webinar_duration: 45 Minutes</ContentVariable>
+                <ContentVariable Name="webinar_key">You should get this number from yout Go To Webinar account for the webinar session you are going to use this campaign for.</ContentVariable>
+                <ContentVariable Name="microsite_gurl">http://#</ContentVariable>
+                <ContentVariable Name="company_contact_link">http://#</ContentVariable>
+                <ContentVariable Name="twitter_handler">@PutYourTwitterNameHere</ContentVariable>
+            </ContentVariables>
+        </RuleGroup>
+    </RuleGroupSet>
+</Program>
